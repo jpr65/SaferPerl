@@ -44,12 +44,13 @@ sub no_args {
     print "This sub has no arguments";
 
 }
+
 # ----------------------------------------------------------------------
 sub add_date_positional {
     my $trouble_level = p_start;
 
     my $self     = par self => $is_self  => shift;
-    my $iso_date = par date => IsoDate => shift;
+    my $iso_date = par date => IsoDate   => shift;
 
     p_end (\@_);
  
@@ -58,7 +59,6 @@ sub add_date_positional {
     # --- run sub -------------------------------------------------
 
     $self->{date} = $iso_date;
-    # print "ShoppingCart.put_in($article);\n";
 }
 
 # ----------------------------------------------------------------------

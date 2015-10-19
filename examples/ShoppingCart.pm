@@ -72,7 +72,7 @@ sub put_in {
 }
 
 # ----------------------------------------------------------------------
-sub get_content {
+sub content {
     my $trouble_level = p_start;
 
     my $self    = par self => $is_self => shift;
@@ -88,6 +88,27 @@ sub get_content {
 	$result .= $self->{articles}->{$article}." * $article\n";
     }
     return $result;
+}
+
+# ----------------------------------------------------------------------
+sub count_articles {
+    my $trouble_level = p_start;
+
+    my $self    = par self => $is_self => shift;
+
+    p_end \@_;
+ 
+    return undef if validation_trouble $trouble_level; 
+ 
+    # --- run sub -------------------------------------------------
+
+    my $article_count = 0;
+
+    foreach my $article (sort(keys(%{$self->{articles}}))) {
+	$article_count += $self->{articles}->{$article};
+    }
+
+    return $article_count;
 }
 
 1;

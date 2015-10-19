@@ -109,6 +109,6 @@ auto_report($meta_info_list);
 my $report = configure_report('html');
 $report->write_all($meta_info_list, "meta_infos.html");
 
-my $report = configure_report('text');
+$report = configure_report('text');
 # $report->write_all($meta_info_list);
 
