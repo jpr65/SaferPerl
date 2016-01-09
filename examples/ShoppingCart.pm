@@ -4,7 +4,7 @@
 #
 # ShoppingCart
 #
-# Sat Aug 30 13:07:24 2014
+# Sat Jan  9 18:52:26 2016
 
 package ShoppingCart;
 
@@ -16,7 +16,7 @@ use Data::Dumper;
 use Scalar::Validation qw(:all);
 use MyValidation;
 
-my ($is_self) = is_a 'ShoppingCart'; # parentesis are needed!!
+my ($is_self) = is_a __PACKAGE__; # parentesis are needed!!
 
 # --- create Instance --------------------------------------------------
 sub new
@@ -37,8 +37,10 @@ sub new
 sub _init {
     my $trouble_level = p_start;
 
-    my $self = par  self => $is_self    => shift;
+    my $self = par  self => $is_self  => shift;
+
     my %pars = convert_to_named_params \@_;
+
     my $ID   = npar -ID  => -Optional => PositiveInt => \%pars;
 
     p_end \%pars;
