@@ -11,6 +11,8 @@ $| = 1;
 
 use Data::Dumper;
 
+use lib '../../AndroidPerl/spartanic/lib';
+
 use Scalar::Validation qw(:all);
 use Report::Porf qw(:all);
 
@@ -30,7 +32,7 @@ my $sc = build_meta_info_for_module
     ('ShoppingCart', sub { return ShoppingCart->new(-ID => "4711"); });
 
 $sc->put_in();
-$sc->get_content();
+# $sc->get_content();
 
 # ------------------------------------------------------------------------------
 my $template = build_meta_info_for_module('ClassTemplate');
@@ -52,11 +54,11 @@ end_meta_info_gen();
 print "\n# ==== End of meta generation, fallback to validation mode ==========\n\n";
 
 # ------------------------------------------------------------------------------
-print Dumper($sc);
-$sc->put_in();
+# print Dumper($sc);
+# $sc->put_in();
 
-print Dumper($template);
-$template->current_position_positional(1, 2);
+# print Dumper($template);
+# $template->current_position_positional(1, 2);
 
 # ------------------------------------------------------------------------------
 my $my_class = build_meta_info_for_module('MyClass',

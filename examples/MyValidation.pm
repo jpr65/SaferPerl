@@ -8,8 +8,6 @@
 
 package MyValidation;
 
-use DateTime;
-
 use Scalar::Validation qw(:all);
 
 print "# use MyValidation\n";
@@ -105,4 +103,11 @@ declare_rule (
     -message     => sub { "$_ is not an article ID like ID1234" },
     -description => '$_ has to be a scalar like ID1234'
     );
+    
+#------------------------------------------------------------------------------
+#
+#  Rules end
+#
+#------------------------------------------------------------------------------
+
 1;

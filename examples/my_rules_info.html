@@ -1,0 +1,11 @@
+<html>
+<table border='1' rules='cols'>
+<thead>
+<tr><th>Rule Name</th><th>Parent Rule</th><th>Quelle</th><th>Beschreibung</th><th>Enum</th></tr>
+</thead>
+<tr bgcolor="#DDDDDD"><td  align="left">ArticleId</td><td  align="left">Scalar</td><td  align="left">MyValidation</td><td  align="left">$_ has to be a scalar like ID1234</td><td  align="left"></td></tr>
+<tr bgcolor="#FFFFFF"><td  align="left">BirthDate</td><td  align="left">IsoDate</td><td  align="left">MyValidation</td><td  align="left">This rule checks if $_ is an ISO birth date and in the past</td><td  align="left"></td></tr>
+<tr bgcolor="#DDDDDD"><td  align="left">IsoDate</td><td  align="left">Filled</td><td  align="left">MyValidation</td><td  align="left">This rule checks if $_ is an ISO 8601 date like 2014-08-30</td><td  align="left"></td></tr>
+<tr bgcolor="#FFFFFF"><td  align="left">LivingBirthDate</td><td  align="left">BirthDate</td><td  align="left">MyValidation</td><td  align="left">This rule checks if $_ is an ISO birth date of a living person</td><td  align="left"></td></tr>
+</table><p/>
+</html>
